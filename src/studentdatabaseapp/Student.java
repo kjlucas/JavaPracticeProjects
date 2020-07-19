@@ -8,7 +8,8 @@ public class Student {
 	private final static int courseCost = 600;
 	private static int[] id = { 0, 0, 0, 0 };
 
-	Student() {
+	public Student() {
+		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		System.out.print("Enter student's first name: ");
 		firstName = in.nextLine();
@@ -25,6 +26,7 @@ public class Student {
 
 	public void enroll() {
 
+		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		do {
 			System.out.println("Enter course to enroll (Q to quit): ");
@@ -57,6 +59,7 @@ public class Student {
 
 	public void payTuition() {
 		viewTuitionBalance();
+		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		System.out.print("Enter payment amount: ");
 		int payment = in.nextInt();

@@ -6,6 +6,7 @@ public class StudentDatabaseApp {
 
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		System.out.print("How many student would you like to enroll?");
 		Student[] students = new Student[in.nextInt()];
